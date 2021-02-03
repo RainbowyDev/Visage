@@ -1,0 +1,77 @@
+name: Visage
+version: @project.version@
+authors: [SquareCode]
+description: Advanced and fully automated cheat-protection to prevent cheating on the server
+website: https://squarecode.de
+main: net.square.Visage
+loadbefore:
+  - Atlas
+depend:
+  - Atlas
+
+commands:
+  visage:
+    description: Main command
+    aliases: vsg
+    usage: /visage <argument>
+permissions:
+  visage.command.gui:
+    description: Permission for command visage gui
+    children:
+      - visage.command.*
+    default: op
+  visage.command.tps:
+    description: Permission for command visage tps
+    children:
+      - visage.command.*
+    default: op
+  visage.command.enabled:
+    description: Permission for command visage enabled
+    children:
+      - visage.command.*
+    default: op
+  visage.command.verbose:
+    description: Permission for command visage verbose
+    children:
+      - visage.command.*
+    default: false
+  visage.command.notify:
+    description: Permission for command visage notify
+    children:
+      - visage.command.*
+    default: op
+  visage.command.debug:
+    description: Permission for command visage debug
+    children:
+      - visage.command.*
+    default: op
+  visage.command.kicks:
+    description: Permission for command visage kicks
+    children:
+      - visage.command.*
+    default: op
+  visage.command.check:
+    description: Permission for command visage checks
+    children:
+      - visage.command.*
+    default: op
+  visage.command.broadcast:
+    description: Permission for command visage broadcast
+    children:
+      - visage.command.*
+    default: op
+  visage.command.logs:
+    description: Permission for command visage logs
+    children:
+      - visage.command.*
+    default: op
+  visage.bypass:
+    description: Permission for bypass all checks of visage
+    children:
+      - visage.admin.*
+    default: false
+  visage.notification:
+    description: Permission to receive notifications from visage
+    children:
+      - visage.admin.*
+    default: op
